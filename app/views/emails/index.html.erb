@@ -1,0 +1,23 @@
+<div class="button-center">
+ <%= form_tag(emails_path, method: :post, remote: true) do %>
+    <%= submit_tag 'Recevoir un email !', :name => 'commit', class: "btn btn-success btn-lg"%>
+  <% end %>
+</div>
+
+<br>
+<br>
+<br>
+<h1>Gmail like </h1>
+<div class="row-title">
+<h1>Liste des emails</h1>
+<h1>Email sélectionné</h1>
+</div>
+
+<div class="row-mailer">
+<ul class="list-group" id="email-list" >
+  <% @email.each do |email| %>
+    <li class="list-group-item" id="Emailtest">"<%= email.objet %>" by <b><%= email.body  %></b>
+  <% end %>
+</ul>
+</div>
+
