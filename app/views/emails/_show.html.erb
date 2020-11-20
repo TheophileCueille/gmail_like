@@ -3,8 +3,6 @@
             <h1>Email n°<%= @id %>:  <%= @email.objet %> </h1>
             <h4>Titre de l'évènement : <%= @email.body %></h4>
             <a href='' class="btn btn-primary">Marquer comme non-lu</a>
-            <a href='/emails/<%= @id %>' class="btn btn-danger" data-confirm="Etes-vous sûrs de supprimer cet email ?!" 
-            data-method="DELETE"  data-remote="true">Supprimer le mail </a>
-    
+            <%= link_to 'Supprimer le mail', email_path(email), method: :delete, data: {confirm: "Are you sure"}, remote: true %>
         </div>
 </section>
