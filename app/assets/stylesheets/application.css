@@ -16,6 +16,7 @@
 .row-mailer {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 .button-center{
     margin-left: 45%;

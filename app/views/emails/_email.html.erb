@@ -1,1 +1,1 @@
-<li>"<%= email.objet %>" by <b><%= email.body  %></b></li>
+  <li class="list-group-item" id="liste"> <%= link_to email.objet, email_path(email), remote: true %> <b><%= email.body  %></b> </li>

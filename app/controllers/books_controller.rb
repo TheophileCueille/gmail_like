@@ -14,7 +14,7 @@ class BooksController < ApplicationController
   end
 
   def destroy 
-    @id = params[:id]
+    
     @book = Book.find(params[:id])
     @book.destroy
 
@@ -23,7 +23,8 @@ class BooksController < ApplicationController
       format.js { }
     end
   end
-  
+
+
   private
   
   def book_params

@@ -15,9 +15,12 @@
 
 <div class="row-mailer">
 <ul class="list-group" id="email-list" >
-  <% @email.each do |email| %>
-    <li class="list-group-item" id="Emailtest">"<%= email.objet %>" by <b><%= email.body  %></b>
+  <% @email.each do |email| %> 
+  <li class="list-group-item" id="liste"> <%= link_to email.objet, email_path(email), remote: true %> <b><%= email.body  %></b> </li>
   <% end %>
 </ul>
+<div id="testMe">
+</div>
+
 </div>
 
